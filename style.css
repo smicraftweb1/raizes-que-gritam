@@ -1,0 +1,223 @@
+/* Reset básico para remover margens e padding padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #B22222; /* Vermelho */
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 5px solid #FFD633; /* Amarelo */
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+header .btn {
+  background-color: #FFD633; /* Amarelo */
+  color: #B22222; /* Vermelho */
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+header .btn:hover {
+  background-color: #FA893A; /* Laranja */
+  transform: scale(1.05);
+}
+
+/* Seções */
+section {
+  padding: 50px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #B22222; /* Vermelho */
+}
+
+section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #531902; /* Marrom escuro */
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+section ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+section li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+section li strong {
+  color: #df9800; /* Amarelo queimado */
+}
+
+/* Galeria de Imagens */
+.gallery .images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 32%; /* Ajuste para 3 imagens ficarem lado a lado */
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  object-fit: cover; /* Para garantir que a imagem se ajuste corretamente sem distorção */
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+
+  .gallery .images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 80%; /* Reduzir o tamanho das imagens em telas pequenas */
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para a seção Raízes */
+.raízes {
+  background: url('textura-palha.png') repeat;
+  background-color: #fffbe6; /* fundo claro terroso */
+  padding: 60px 0;
+  border-left: 8px solid #B22222;
+  border-right: 8px solid #B22222;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+}
+
+.raízes h2 {
+  font-size: 2.8rem;
+  color: #B22222;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-left: 45px;
+}
+
+.raízes h2::before {
+  content: '';
+  background-image: url('icone-indigena.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.raízes p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: justify;
+}
+
+/* Estilos para os botões A+ e A- */
+.font-size-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.font-size-controls .btn {
+  background-color: #FFD633; /* Amarelo */
+  color: #B22222; /* Vermelho */
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border: none;
+}
+
+.font-size-controls .btn:hover {
+  background-color: #FA893A; /* Laranja */
+  transform: scale(1.1);
+}
+
+
